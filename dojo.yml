@@ -1,0 +1,26 @@
+id: cs426dojo
+
+name: CS426-DOJO
+
+type: homework
+
+description:
+    This is a homework DOJO for Purdue University course CS426 "Computer Security"
+
+
+
+modules:
+- id: web-security
+  challenges:
+  - id: sqli-pin
+    name: SQLi 1
+  - id: level-4
+    name: SQLi 2
+  - id: level-1
+    name: Path Traversal 1
+  - id: xss-stored-html
+    name: XSS 1
+  - id: xss-stored-alert
+    name: XSS 2
+  - id: level-11
+    name: CSRF 1

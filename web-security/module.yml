@@ -1,0 +1,82 @@
+name: Web Security
+challenges:
+- id: level-1
+  name: Path Traversal 1
+- id: path-traversal-2
+  name: Path Traversal 2
+- id: cmdi-ls-semicolon
+  name: CMDi 1
+- id: cmdi-ls-pipe
+  name: CMDi 2
+- id: cmdi-ls-quote
+  name: CMDi 3
+- id: level-2
+  name: CMDi 4
+- id: cmdi-touch-blind
+  name: CMDi 5
+- id: cmdi-ls-filter
+  name: CMDi 6
+- id: level-3
+  name: Authentication Bypass 1
+- id: auth-bypass-cookie
+  name: Authentication Bypass 2
+- id: sqli-pin
+  name: SQLi 1
+- id: level-4
+  name: SQLi 2
+- id: level-5
+  name: SQLi 3
+- id: level-6
+  name: SQLi 4
+- id: level-7
+  name: SQLi 5
+- id: xss-stored-html
+  name: XSS 1
+- id: xss-stored-alert
+  name: XSS 2
+- id: level-8
+  name: XSS 3
+- id: level-9
+  name: XSS 4
+- id: level-10
+  name: XSS 5
+- id: xss-rf-post
+  name: XSS 6
+- id: xss-exfil-cookie
+  name: XSS 7
+- id: level-11
+  name: CSRF 1
+- id: level-12
+  name: CSRF 2
+- id: csrf-reflected-alert
+  name: CSRF 3
+- id: level-13
+  name: CSRF 4
+- id: level-14
+  name: CSRF 5
+resources:
+- name: "Web Security: Introduction"
+  type: lecture
+  video: AKTYVWCi6ss
+  playlist: PL-ymxv0nOtqrvXLSALV5SQ5v3oyKY4DWg
+  slides: 1ATO_U0aUlk2LRhlnIwdqTkDfu-lWRb5xoLDv0NQLPs8
+- name: "Web Security: Structured Query Language"
+  type: lecture
+  video: 433mRGcpHeA
+  playlist: PL-ymxv0nOtqrvXLSALV5SQ5v3oyKY4DWg
+  slides: 1KpvjoFnlC9HcUJbkg-_VASf2JETMwEZjpzO0uGSoCo4
+- name: "Web Security: Injection"
+  type: lecture
+  video: sdStLx3_Q0M
+  playlist: PL-ymxv0nOtqrvXLSALV5SQ5v3oyKY4DWg
+  slides: 1rP8IIc_6B8Z7KpqBGxkneIzAjURRQ-YlkJV-_4dF-SM
+- name: "Web Security: Same-Origin Policy"
+  type: lecture
+  video: b1NOCHm4t_s
+  playlist: PL-ymxv0nOtqrvXLSALV5SQ5v3oyKY4DWg
+  slides: 1KkiR8B_9xQilW_yq6W9FZ6xBN78V0S1aH1XvQfufYIk
+- name: "Tooling Documentation"
+  type: markdown
+  content: |
+    - [python -m http.server](https://docs.python.org/library/http.server.html)
+    - [JavaScript Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)

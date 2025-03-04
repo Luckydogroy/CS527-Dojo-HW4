@@ -1,0 +1,716 @@
+version: "3.9"
+
+services:
+  h1:
+    restart: always
+    image: "N/A"
+    networks:
+      - frontend
+      - layer1
+    entrypoint: ["/fserve", "/babybot_level3_h1"]
+  h2:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer1
+      - layer2
+    entrypoint: ["/fserve", "/babybot_level3_h2"]
+  h3:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer3
+      - layer4
+      entrypoint: ["/fserve", "/babybot_level3_h3"]
+  h4:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer4
+      - layer5
+      entrypoint: ["/babybot_level3_h4"]
+  h5:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer5
+      - layer6
+      entrypoint: ["/fserve", "/babybot_level3_h5"]
+
+  h6:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer6
+      - layer7
+      entrypoint: ["/babybot_level3_h6"]
+
+  h7:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer7
+      - layer8
+      entrypoint: ["/fserve", "/babybot_level3_h7"]
+
+  h8:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer8
+      - layer9
+      entrypoint: ["/babybot_level3_h8"]
+
+  h9:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer9
+      - layer10
+      entrypoint: ["/fserve", "/babybot_level3_h9"]
+
+  h10:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer10
+      - layer11
+      entrypoint: ["/fserve", "/babybot_level3_h10"]
+
+  h11:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer11
+      - layer12
+      entrypoint: ["/fserve", "/babybot_level3_h11"]
+
+  h12:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer12
+      - layer13
+      entrypoint: ["/fserve", "/babybot_level3_h12"]
+
+  h13:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer13
+      - layer14
+      entrypoint: ["/babybot_level3_h13"]
+
+  h14:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer14
+      - layer15
+      entrypoint: ["/fserve", "/babybot_level3_h14"]
+
+  h15:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer15
+      - layer16
+      entrypoint: ["/fserve", "/babybot_level3_h15"]
+
+  h16:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer16
+      - layer17
+      entrypoint: ["/fserve", "/babybot_level3_h16"]
+
+  h17:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer17
+      - layer18
+      entrypoint: ["/babybot_level3_h17"]
+
+  h18:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer18
+      - layer19
+      entrypoint: ["/babybot_level3_h18"]
+
+  h19:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer19
+      - layer20
+      entrypoint: ["/fserve", "/babybot_level3_h19"]
+
+  h20:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer20
+      - layer21
+      entrypoint: ["/babybot_level3_h20"]
+
+  h21:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer21
+      - layer22
+      entrypoint: ["/fserve", "/babybot_level3_h21"]
+
+  h22:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer22
+      - layer23
+      entrypoint: ["/fserve", "/babybot_level3_h22"]
+
+  h23:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer23
+      - layer24
+      entrypoint: ["/fserve", "/babybot_level3_h23"]
+
+  h24:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer24
+      - layer25
+      entrypoint: ["/fserve", "/babybot_level3_h24"]
+
+  h25:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer25
+      - layer26
+      entrypoint: ["/fserve", "/babybot_level3_h25"]
+
+  h26:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer26
+      - layer27
+      entrypoint: ["/fserve", "/babybot_level3_h26"]
+
+  h27:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer27
+      - layer28
+      entrypoint: ["/fserve", "/babybot_level3_h27"]
+
+  h28:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer28
+      - layer29
+      entrypoint: ["/babybot_level3_h28"]
+
+  h29:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer29
+      - layer30
+      entrypoint: ["/babybot_level3_h29"]
+
+  h30:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer30
+      - layer31
+      entrypoint: ["/fserve", "/babybot_level3_h30"]
+
+  h31:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer31
+      - layer32
+      entrypoint: ["/fserve", "/babybot_level3_h31"]
+
+  h32:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer32
+      - layer33
+      entrypoint: ["/babybot_level3_h32"]
+
+  h33:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer33
+      - layer34
+      entrypoint: ["/fserve", "/babybot_level3_h33"]
+
+  h34:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer34
+      - layer35
+      entrypoint: ["/babybot_level3_h34"]
+
+  h35:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer35
+      - layer36
+      entrypoint: ["/fserve", "/babybot_level3_h35"]
+
+  h36:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer36
+      - layer37
+      entrypoint: ["/babybot_level3_h36"]
+
+  h37:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer37
+      - layer38
+      entrypoint: ["/fserve", "/babybot_level3_h37"]
+
+  h38:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer38
+      - layer39
+      entrypoint: ["/babybot_level3_h38"]
+
+  h39:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer39
+      - layer40
+      entrypoint: ["/fserve", "/babybot_level3_h39"]
+
+  h40:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer40
+      - layer41
+      entrypoint: ["/fserve", "/babybot_level3_h40"]
+
+  h41:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer41
+      - layer42
+      entrypoint: ["/fserve", "/babybot_level3_h41"]
+
+  h42:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer42
+      - layer43
+      entrypoint: ["/fserve", "/babybot_level3_h42"]
+
+  h43:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer43
+      - layer44
+      entrypoint: ["/babybot_level3_h43"]
+
+  h44:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer44
+      - layer45
+      entrypoint: ["/babybot_level3_h44"]
+
+  h45:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer45
+      - layer46
+      entrypoint: ["/babybot_level3_h45"]
+
+  h46:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer46
+      - layer47
+      entrypoint: ["/fserve", "/babybot_level3_h46"]
+
+  h47:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer47
+      - layer48
+      entrypoint: ["/babybot_level3_h47"]
+
+  h48:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer48
+      - layer49
+      entrypoint: ["/fserve", "/babybot_level3_h48"]
+
+  h49:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer49
+      - layer50
+      entrypoint: ["/fserve", "/babybot_level3_h49"]
+
+  h50:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer50
+      - layer51
+      entrypoint: ["/babybot_level3_h50"]
+
+  h51:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer51
+      - layer52
+      entrypoint: ["/fserve", "/babybot_level3_h51"]
+
+  h52:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer52
+      - layer53
+      entrypoint: ["/babybot_level3_h52"]
+
+  h53:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer53
+      - layer54
+      entrypoint: ["/fserve", "/babybot_level3_h53"]
+
+  h54:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer54
+      - layer55
+      entrypoint: ["/fserve", "/babybot_level3_h54"]
+
+  h55:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer55
+      - layer56
+      entrypoint: ["/fserve", "/babybot_level3_h55"]
+
+  h56:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer56
+      - layer57
+      entrypoint: ["/fserve", "/babybot_level3_h56"]
+
+  h57:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer57
+      - layer58
+      entrypoint: ["/fserve", "/babybot_level3_h57"]
+
+  h58:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer58
+      - layer59
+      entrypoint: ["/babybot_level3_h58"]
+  h59:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer59
+      - layer60
+      entrypoint: ["/fserve", "/babybot_level3_h59"]
+  flag_host:
+    restart: always
+    image: "N/A"
+    networks:
+      - layer60
+    entrypoint: ["/babybot_level3_flag_host"]
+
+networks:
+  frontend:
+    ipam:
+      config:
+        - subnet: "10.10.10.0/24"
+  layer1:
+    ipam:
+      config:
+        - subnet: "10.10.20.0/24"
+  layer2:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer3:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer4:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer5:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer6:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer7:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer8:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer9:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer10:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer11:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer12:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer13:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer14:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer15:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer16:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer17:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer18:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer19:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer20:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer21:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer22:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer23:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer24:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer25:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer26:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer27:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer28:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer29:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer30:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer31:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer32:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer33:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer34:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer35:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer36:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer37:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer38:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer39:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer40:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer41:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer42:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer43:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer44:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer45:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer46:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer47:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer48:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer49:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer50:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer51:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer52:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer53:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer54:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer55:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer56:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer58:
+      config:
+        - subnet: "10.10.30.0/24"
+  layer59:
+    ipam:
+      config:
+        - subnet: "10.10.30.0/24"
+      

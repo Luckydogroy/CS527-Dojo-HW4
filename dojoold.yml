@@ -1,0 +1,842 @@
+id: software-exploitation
+name: Software Exploitation
+
+award:
+  belt: blue
+
+description: |
+  Hackers are the wizards of the digital age.
+  By now, you are a hacker yourself, but there is still room for your skills to grow.
+  Have you mastered the truly occult?
+  The deep, secret knowledge passed down from generation to secretive generation?
+  The power to truly take control of complex software with cutting-edge security mitigations, and bend it to your will...
+  Push on, now, into the depths of security, and use this dojo to fill your stores of the arcane knowledge that will power your digital sorcery.
+
+type: topic
+
+files:
+ - type: download
+   url: "https://www.dropbox.com/scl/fi/zymtq9sit5qeko0l81ph2/vmlinux3?rlkey=eh89lpb19dhhuxfw7ifvckut1&dl=1"
+   path: "kernel-exploitation/files/3/vmlinux"
+ - type: download
+   url: "https://www.dropbox.com/scl/fi/cfln31ihejxyco1xb4j2o/vmlinux2?rlkey=h2tt3yuo5xrw56hquam98y8gh&dl=1"
+   path: "kernel-exploitation/files/2/vmlinux"
+ - type: download
+   url: "https://www.dropbox.com/scl/fi/uhhjp8yf65p81p31rql1e/vmlinux1?rlkey=jybroi9nsya54ffrevmnk89hg&dl=1"
+   path: "kernel-exploitation/files/1/vmlinux"
+ - type: download
+   url: "https://www.dropbox.com/scl/fi/hkwgmkajzw2rzas068g66/vmlinux0?rlkey=q5kkd5br7ize6n1002ghpprz3&dl=1"
+   path: "kernel-exploitation/files/0/vmlinux"
+
+modules:
+- id: return-oriented-programming
+  name: Return Oriented Programming
+  description: |
+    Picture yourself as a digital maestro, orchestrating a symphony of code in a vast digital realm.
+    However, there’s a twist: you don’t get to pen down your own notes.
+    Instead, you're given a legacy of existing code snippets, scattered across the system.
+    This is the essence of Return Oriented Programming (ROP) exploits! Using nothing but the remnants of the system’s own code, you craft a cunning composition that dances to your own tune, bypassing modern security measures with elegance and stealth.
+
+    Each snippet is like a musical phrase, ending in a "return" instruction, whisking you off to the next snippet in your clandestine concerto.
+    With each leap and bound, you weave a nefarious narrative, circumventing security checks and executing unauthorized actions, all while under the unsuspecting nose of the system’s defenses.
+
+    ROP is not just a hack; it’s a masterpiece of unauthorized orchestration, a ballet of borrowed instructions, choreographed with precision to achieve your clandestine objectives.
+    With ROP, you step into a realm where every byte is a beat, and every return is a rhythm, embarking on an exhilarating journey of exploitation and discovery.
+  challenges:
+  - id: level-1-0
+    name: level1.0
+    description: Overwrite a return address to trigger a win function!
+  - id: level-1-1
+    name: level1.1
+    description: Overwrite a return address to trigger a win function!
+  - id: level-2-0
+    name: level2.0
+    description: Use ROP to trigger a two-stage win function!
+  - id: level-2-1
+    name: level2.1
+    description: Use ROP to trigger a two-stage win function!
+  - id: level-3-0
+    name: level3.0
+    description: Use ROP to trigger a multi-stage win function!
+  - id: level-3-1
+    name: level3.1
+    description: Use ROP to trigger a multi-stage win function!
+  - id: level-4-0
+    name: level4.0
+    description: Leverage a stack leak while crafting a ROP chain to obtain the flag!
+  - id: level-4-1
+    name: level4.1
+    description: Leverage a stack leak while crafting a ROP chain to obtain the flag!
+  - id: level-5-0
+    name: level5.0
+    description: Craft a ROP chain to obtain the flag, now with no stack leak!
+  - id: level-5-1
+    name: level5.1
+    description: Craft a ROP chain to obtain the flag, now with no stack leak!
+  - id: level-6-0
+    name: level6.0
+    description: Craft a ROP chain to obtain the flag, now with no syscall gadget!
+  - id: level-6-1
+    name: level6.1
+    description: Craft a ROP chain to obtain the flag, now with no syscall gadget!
+  - id: level-7-0
+    name: level7.0
+    description: Utilize a libc leak to ROP with libc!
+  - id: level-7-1
+    name: level7.1
+    description: Utilize a libc leak to ROP with libc!
+  - id: level-8-0
+    name: level8.0
+    description: ROP with libc, no free leak this time!
+  - id: level-8-1
+    name: level8.1
+    description: ROP with libc, no free leak this time!
+  - id: level-9-0
+    name: level9.0
+    description: Perform a stack pivot to gain control flow!
+  - id: level-9-1
+    name: level9.1
+    description: Perform a stack pivot to gain control flow!
+  - id: level-10-0
+    name: level10.0
+    description: Perform a partial overwrite to call the win function.
+  - id: level-10-1
+    name: level10.1
+    description: Perform a partial overwrite to call the win function.
+  - id: level-11-0
+    name: level11.0
+    description: Apply stack pivoting to call the win function.
+  - id: level-11-1
+    name: level11.1
+    description: Apply stack pivoting to call the win function.
+  - id: level-12-0
+    name: level12.0
+    description: Creatively apply stack pivoting to call the win function.
+  - id: level-12-1
+    name: level12.1
+    description: Creatively apply stack pivoting to call the win function.
+  - id: level-13-0
+    name: level13.0
+    description: Perform ROP when the function has a canary!
+  - id: level-13-1
+    name: level13.1
+    description: Perform ROP when the function has a canary!
+  - id: level-14-0
+    name: level14.0
+    description: Perform ROP against a network forkserver!
+  - id: level-14-1
+    name: level14.1
+    description: Perform ROP against a network forkserver!
+  - id: level-15-0
+    name: level15.0
+    description: Perform ROP when the stack frame returns to libc!
+  - id: level-15-1
+    name: level15.1
+    description: Perform ROP when the stack frame returns to libc!
+  resources:
+  - name: "Return Oriented Programming: Introduction"
+    type: lecture
+    video: El8-vMDJ1zY
+    playlist: PL-ymxv0nOtqo0fRmVHxeOoKHX6ncNWp06
+    slides: 1OM8gd6oqiFl2tU6G-ydiCfkNhgUTNKDFoYz-g2IIwHg
+  - name: "Return Oriented Programming: Binary Lego"
+    type: lecture
+    video: L0gzNhbnOUA
+    playlist: PL-ymxv0nOtqo0fRmVHxeOoKHX6ncNWp06
+    slides: 1axSooHyjCJulwGNrhYM2GyjWJBSxTAg9Ia9Jpw9gW6s
+  - name: "Return Oriented Programming: Techniques"
+    type: lecture
+    video: OVkObKS0gOo
+    playlist: PL-ymxv0nOtqo0fRmVHxeOoKHX6ncNWp06
+    slides: 1x7PASDmpjPDXvkD9HmZ2wC2JJNT8lHCkZTYcDQ9CjAk
+  - name: "Return Oriented Programming: Complications"
+    type: lecture
+    video: Iq2IFCKDpKc
+    playlist: PL-ymxv0nOtqo0fRmVHxeOoKHX6ncNWp06
+    slides: 12_ymnKrYPUD1rJz6tauS2oNw45eWivhYMWfUzsnOeHM
+
+- id: format-string-exploits
+  name: Format String Exploits
+  description: |
+    Exploiting format string vulnerabilities is like a locksmith using a special set of tools to subtly manipulate the inner workings of a lock.
+    It involves delicately inserting custom-crafted sequences into a program's output functions, much like a skilled safecracker tuning into the faint clicks of a safe's mechanism.
+    Each carefully chosen character or specifier in the format string acts like a precise tweak to the internal gears, potentially revealing hidden information or granting control over the system's memory.
+    This technique is a blend of art and science, requiring a deep understanding of the software's architecture and a creative approach to bending its functionalities beyond their intended limits.
+    It's a thrilling intellectual puzzle, unlocking the secrets of a program from the inside out.
+  challenges:
+  - id: level-1-0
+    name: Level1.0
+    description: Use a format string exploit to reveal a string stored on the stack
+  - id: level-1-1
+    name: Level1.1
+    description: Use a formatstring exploit to reveal a string stored on the stack
+  - id: level-2-0
+    name: Level2.0
+    description: Use a format string exploit to reveal a string stored on the stack
+  - id: level-2-1
+    name: Level2.1
+    description: Use a format string exploit to reveal a string stored on the stack
+  - id: level-3-0
+    name: Level3.0
+    description: Use a format string exploit to read the flag directly from the .bss section
+  - id: level-3-1
+    name: Level3.1
+    description: Use a format string exploit to read the flag directly from the .bss section
+  - id: level-4-0
+    name: Level4.0
+    description: Use a format string exploit to set a global variable
+  - id: level-4-1
+    name: Level4.1
+    description: Use a format string exploit to set a global variable
+  - id: level-5-0
+    name: Level5.0
+    description: Use a format string exploit to set a larger global variable
+  - id: level-5-1
+    name: Level5.1
+    description: Use a format string exploit to set a larger global variable
+  - id: level-6-0
+    name: Level6.0
+    description: Use a format string exploit to copy a value and overwrite a global variable
+  - id: level-6-1
+    name: Level6.1
+    description: Use a format string exploit to copy a value and overwrite a global variable
+  - id: level-7-0
+    name: Level7.0
+    description: Use a format string exploit to overwrite a got entry
+  - id: level-7-1
+    name: Level7.1
+    description: Use a format string exploit to overwrite a got entry
+  - id: level-8-0
+    name: Level8.0
+    description: Use a format string exploit to call win
+  - id: level-8-1
+    name: Level8.1
+    description: Use a format string exploit to call win
+  - id: level-9-0
+    name: Level9.0
+    description: Use a format string exploit to call win.  this time, with no loop.
+  - id: level-9-1
+    name: Level9.1
+    description: Use a format string exploit to call win.  this time, with no loop.
+  - id: level-10-0
+    name: Level10.0
+    description: Chain a format string exploit into rop
+  - id: level-10-1
+    name: Level10.1
+    description: Chain a format string exploit into rop
+  - id: level-11-0
+    name: Level11.0
+    description: Chain a format string exploit into rop, now with pie!
+  - id: level-11-1
+    name: Level11.1
+    description: Chain a format string exploit into rop, now with pie!
+  - id: level-12-0
+    name: Level12.0
+    description: Chain a format string exploit into ROP, now with pie and input filtering!
+  - id: level-12-1
+    name: Level12.1
+    description: Chain a format string exploit into ROP, now with pie and input filtering!
+  resources:
+  - name: "Format String Exploits: Introduction"
+    type: lecture
+    video: vc_9Ujkpy7I
+    playlist: PL-ymxv0nOtqrXNPl1I6qnRZpC35KC_Bxc
+    slides: 1jSlEFa2CcmV0uovFfjWn-M_PTyqpkQlFfRsCWwFPMlQ
+  - name: "Format String Exploits: Leaking Data"
+    type: lecture
+    video: l8jGa_B7wvM
+    playlist: PL-ymxv0nOtqrXNPl1I6qnRZpC35KC_Bxc
+    slides: 1gpyS-uiKvubsLhVdXjynxfrRpNrJ3txaeypHMxJ0YtQ
+  - name: "Format String Exploits: Writing Data"
+    type: lecture
+    video: QOgD3jPHyRY
+    playlist: PL-ymxv0nOtqrXNPl1I6qnRZpC35KC_Bxc
+    slides: 1NoZu5nTJY8407daGT0xOOO1ofn9OBzfCu-n0w_-Hohw
+  - name: Autogenerated tips and tricks from the discord channel
+    type: markdown
+    content: |
+          This material was generated by ChatGPT-4 from a transcript of the Discord help channel for this module.
+          
+          - When dealing with format string challenges, it's important to understand the difference between `%n`, `%hn`, and `%hhn`. Each one has its purpose, and depending on the size of the data you want to write, one might be more suitable than the others.
+          - In some cases, you might need to overwrite only a single byte of a return address to achieve the desired result. Be creative and look for opportunities to use this technique.
+          - Consider using the `$` specifier to write to pointers on the stack if the challenge allows it. This can be helpful for modifying the return address in some situations.
+          - Pwntools is a powerful library for dealing with format strings, but it might not always work perfectly for every scenario.
+            If you encounter issues with it, consider simplifying your approach and building up the solution manually. Pwntools has useful functions like `fmtstr_payload()` and `leak_stack()`, which can be helpful in building your payload.
+          - When attempting to solve more difficult format string challenges, it's crucial to understand how stack addresses work and how they can change during runtime. In some cases, overwriting a whole address might not be an option due to a lack of leaks.
+          - For some challenges, the intended solution might involve using tricks or techniques that are not strictly related to format string payloads. Be open to exploring new ideas and approaches to find the solution.
+          - It's possible that there are multiple ways to solve a challenge, especially when it comes to ROP (Return-Oriented Programming). Don't be afraid to discuss and compare solutions with others to learn new techniques.
+          - When dealing with more complex challenges, remember that theory and practice might differ. Keep testing and refining your ideas until you find a working solution.
+          - Finally, don't hesitate to ask for help and collaborate with others. Sharing knowledge and discussing solutions can lead to a deeper understanding of the subject and help you become more proficient in solving cybersecurity challenges.
+
+- id: file-struct-exploits
+  name: File Struct Exploits
+  description: |
+    The libc stdio streams functions can drastically improve a program's I/O performance through the use of buffering.
+    This module explores what a `FILE` struct is, how it works, and how this functionality can be exploited to gain read, write, or gain control flow.
+
+  challenges:
+  - id: level-1
+    name: level1
+    description: Harness the power of FILE structs to arbitrarily read data.
+  - id: level-2
+    name: level2
+    description: Harness the power of FILE structs to arbitrarily write data to bypass a security check.
+  - id: level-3
+    name: level3
+    description: Harness the power of FILE structs to redirect data output
+  - id: level-4
+    name: level4
+    description: Harness the power of FILE structs to arbitrarily read/write data to hijack control flow.
+  - id: level-5
+    name: level5
+    description: Abuse built-in FILE structs to leak sensitive information.
+  - id: level-6
+    name: level6
+    description: Abuse built-in FILE structs to bypass a security check.
+  - id: level-7
+    name: level7
+    description: Create a fake _wide_data struct to hijack control of the virtual function table of a FILE struct.
+  - id: level-8
+    name: level8
+    description: Create a fake _wide_data struct to hijack control of the virtual function table of a FILE struct.
+  - id: level-9
+    name: level9
+    description: Create a fake _wide_data struct to hijack control of the virtual function table of a built-in FILE struct.
+  - id: level-10
+    name: level10
+    description: Create a fake _wide_data struct to hijack control of the virtual function table of a FILE struct.
+  - id: level-11
+    name: level11
+    description: Apply FILE struct exploits to leak a secret value.
+  - id: level-12
+    name: level12
+    description: Apply FILE struct exploits to write data to bypass a security check.
+  - id: level-13
+    name: level13
+    description: Apply FILE struct exploits to write data and hijack control flow.
+  - id: level-14
+    name: level14
+    description: Apply FILE struct exploits to write data to hijack control flow.. again?
+  - id: level-15
+    name: level15
+    description: Apply FILE struct exploits to overwrite a GOT entry.
+  - id: level-16
+    name: level16
+    description: Apply FILE struct exploits to overwrite a built-in FILE struct and print the flag.
+  - id: level-17
+    name: level17
+    description: Apply FILE struct exploits to read/write data and capture the flag.
+  - id: level-18
+    name: level18
+    description: Apply FILE struct exploits to arbitrarily read/write data or hijack control flow.
+  - id: level-19
+    name: level19
+    description: Apply FILE struct exploits to arbitrarily read/write data or hijack control flow.
+  - id: level-20
+    name: level20
+    description: Apply various FILE struct exploits to obtain a leak, then hijack hijack control flow.
+  resources:
+  - name: "File Structure Exploits: Introduction"
+    type: lecture
+    video: Y3apP4bInug
+    playlist: PL-ymxv0nOtqrD-3LwVyyUu83kNJBI9RVL
+    slides: 1zvGL92pojVSPkRHGhjTvAfyvYdEodYXDA0rTBNvXMjU
+  - name: "File Structure Exploits: Arbitrary Read and Write"
+    type: lecture
+    video: Tv1Rss5Vqpk
+    playlist: PL-ymxv0nOtqrD-3LwVyyUu83kNJBI9RVL
+    slides: 149aANrvqmttaizMs_XGWh843DTNSd8Da9G50m3gwt5I
+  - name: "File Structure Exploits: File_plus and the vtable"
+    type: lecture
+    video: vkUR58xxSFI
+    playlist: PL-ymxv0nOtqrD-3LwVyyUu83kNJBI9RVL
+    slides: 1Rs04LzYjD4eQ4_TJZCMDJMS8UNcpQ_OXcBpxzKpanC4
+  - name: Autogenerated tips and tricks from the discord channel
+    type: markdown
+    content: |
+      This material was generated by ChatGPT-4 from a transcript of the Discord help channel for this module.
+
+      General Tips and Tricks:
+
+      - When working with file struct exploits, think of "reading from a file to memory" and "writing from memory to a file" to avoid confusion with read/write terminology.
+      - In a vtable exploit, the _wide_data struct and the exploited file struct can be separate or overlapping.
+      - If you encounter a segfault when dealing with the _lock attribute, make sure it is set properly.
+      - Using debugging information as a leak is not against the spirit of the challenges, as the goal is to capture the flag.
+      - Make use of GDB breakpoints to identify where the code may have issues or find potential exploits.
+      - Double-check your interaction with scanf and consider using time.sleep() to resolve issues with whitespace-delimited parsers.
+      - When using Pwn tool, be mindful of using p.clean().decode().
+      - If you find an issue in the code or exploit, such as incorrect function calls or logic, make sure to point it out and resolve it.
+      - For challenges involving file manipulation, you can potentially avoid using close_file by manipulating the fileno directly.
+      - When performing a vtable exploit, you have control over the first argument passed to a function, making it possible to get a strcmp check to pass.
+
+      Challenge-specific Tips and Tricks:
+      - Level 3: The solution is very simple: just replace the file descriptor.
+      - Level 4: Send the address of the 'win' function and fill up the rest of the buffer.
+      - Level 7: The solution does not require overlapping structs, but overlapping can be necessary in later challenges.
+      - Level 7: Calculate the offset from your leak to fp._lock's value, and make it point to a null byte, so the lock can be claimed.
+      - Level 7: The solution can be found by understanding the pointers correctly. Rob's last lecture on gdb can be very helpful for this level.
+      - Level 8: A vtable exploit can be used to solve this challenge.
+      - Level 9: Jump to a location in the win function where your FSOP attack won't get activated again.
+      - Level 12: When using close_file, be cautious of double free or invalid pointer issues.
+      - Level 13: To resolve issues with stdin breaking after using close_file, consider alternative methods to get an arbitrary read without using close_file.
+      - Level 13: One approach is to perform a leak using write_file and an overwrite using read_file.
+      - Level 14: Using close_file might be useful. However, be careful not to close file descriptor 1 when leaking information; otherwise, nothing will be printed to stdout.
+      - Level 16: There is a way to leak the required address, but it may require creative thinking.
+      - Level 16: To leak the stack address for the ROP chain, refer to lectures and office hours for inspiration, but be prepared for creative thinking.
+      - Level 16: An intended solution is to attack the stdio structures inside LIBC to leak the flag.
+      - Level 18-20: If encountering issues while working on these levels, consider adjusting your exploit to avoid additional restrictions or barriers.
+      - Level 18: Make sure to resolve any issues involving incorrect function calls or logic, such as the read_notes issue.
+
+- id: dynamic-allocator-misuse
+  name: Dynamic Allocator Misuse
+  description: |
+    The glibc heap consists of many components distinct parts that balance performance and security.
+    In this introduction to the heap, the thread caching layer, `tcache` will be targeted for exploitation.
+    `tcache` is a fast thread-specific caching layer that is often the first point of interaction for programs working with dynamic memory allocations.
+
+  challenges:
+  - id: level-1-0
+    name: level1.0
+    description: "Exploit a use-after-free vulnerability to get the flag."
+  - id: level-1-1
+    name: level1.1
+    description: "Exploit a use-after-free vulnerability to get the flag."
+  - id: level-2-0
+    name: level2.0
+    description: "Create and exploit a use-after-free vulnerability to get the flag."
+  - id: level-2-1
+    name: level2.1
+    description: "Create and exploit a use-after-free vulnerability to get the flag."
+  - id: level-3-0
+    name: level3.0
+    description: "Create and exploit a use-after-free vulnerability to get the flag when multiple allocations occur."
+  - id: level-3-1
+    name: level3.1
+    description: "Create and exploit a use-after-free vulnerability to get the flag when multiple allocations occur."
+  - id: level-4-0
+    name: level4.0
+    description: "Corrupt the TCACHE entry_struct value to get the flag when multiple allocations occur."
+  - id: level-4-1
+    name: level4.1
+    description: "Corrupt the TCACHE entry_struct value to get the flag when multiple allocations occur."
+  - id: level-5-0
+    name: level5.0
+    description: "Apply the TCACHE metadata in an unintended manner to set a value."
+  - id: level-5-1
+    name: level5.1
+    description: "Apply the TCACHE metadata in an unintended manner to set a value."
+  - id: level-6-0
+    name: level6.0
+    description: "Corrupt the TCACHE entry_struct to read unintended memory."
+  - id: level-6-1
+    name: level6.1
+    description: "Corrupt the TCACHE entry_struct to read unintended memory."
+  - id: level-7-0
+    name: level7.0
+    description: "Corrupt the TCACHE entry_struct to read unintended memory."
+  - id: level-7-1
+    name: level7.1
+    description: "Corrupt the TCACHE entry_struct to read unintended memory."
+  - id: level-8-0
+    name: level8.0
+    description: "Leverage TCACHE exploits to pass a validation check."
+  - id: level-8-1
+    name: level8.1
+    description: "Leverage TCACHE exploits to pass a validation check."
+  - id: level-9-0
+    name: level9.0
+    description: "Leverage TCACHE exploits to pass a validation check."
+  - id: level-9-1
+    name: level9.1
+    description: "Leverage TCACHE exploits to pass a validation check."
+  - id: level-10-0
+    name: level10.0
+    description: "Leverage TCACHE exploits to gain control flow."
+  - id: level-10-1
+    name: level10.1
+    description: "Leverage TCACHE exploits to gain control flow."
+  - id: level-11-0
+    name: level11.0
+    description: "Leverage TCACHE exploits to gain control flow."
+  - id: level-11-1
+    name: level11.1
+    description: "Leverage TCACHE exploits to gain control flow."
+  - id: level-12-0
+    name: level12.0
+    description: "Leverage TCACHE exploits to cause malloc() to return a stack pointer."
+  - id: level-12-1
+    name: level12.1
+    description: "Leverage TCACHE exploits to cause malloc() to return a stack pointer."
+  - id: level-13-0
+    name: level13.0
+    description: "Leverage calling free() on a stack pointer to read secret data."
+  - id: level-13-1
+    name: level13.1
+    description: "Leverage calling free() on a stack pointer to read secret data."
+  - id: level-14-0
+    name: level14.0
+    description: "Leverage TCACHE exploits to obtain the flag."
+  - id: level-14-1
+    name: level14.1
+    description: "Leverage TCACHE exploits to obtain the flag."
+  - id: level-15-0
+    name: level15.0
+    description: "Leverage TCACHE exploits to obtain the flag."
+  - id: level-15-1
+    name: level15.1
+    description: "Leverage TCACHE exploits to obtain the flag."
+  - id: level-16-0
+    name: level16.0
+    description: "Revisit a prior challenge, now with TCACHE safe-linking."
+  - id: level-16-1
+    name: level16.1
+    description: "Revisit a prior challenge, now with TCACHE safe-linking."
+  - id: level-17-0
+    name: level17.0
+    description: "Revisit a prior challenge, now with TCACHE safe-linking."
+  - id: level-17-1
+    name: level17.1
+    description: "Revisit a prior challenge, now with TCACHE safe-linking."
+  - id: level-18-0
+    name: level18.0
+    description: "Revisit a prior challenge, now with TCACHE safe-linking."
+  - id: level-18-1
+    name: level18.1
+    description: "Revisit a prior challenge, now with TCACHE safe-linking."
+  - id: level-19-0
+    name: level19.0
+    description: "Leverage overlapping allocations to obtain the flag."
+  - id: level-19-1
+    name: level19.1
+    description: "Leverage overlapping allocations to obtain the flag."
+  - id: level-20-0
+    name: level20.0
+    description: "16 bytes and a dream."
+  - id: level-20-1
+    name: level20.1
+    description: "16 bytes and a dream."
+  resources:
+  - name: "Dynamic Allocator Misuse: What is the Heap?"
+    type: lecture
+    video: coAJ4KyrWmY
+    playlist: PL-ymxv0nOtqr4OchXR2rV_WNhpj4ccPq1
+    slides: 16XMoNQQB_jP0odRvQFhgMi3Neo9VR0g1jBvBXKYBnh0
+  - name: "Dynamic Allocator Misuse: Dangers"
+    type: lecture
+    video: Cr9IeGQxFoc
+    playlist: PL-ymxv0nOtqr4OchXR2rV_WNhpj4ccPq1
+    slides: 1T5XruKzTxlpslT50op_wxvFsnsa4gshIM0Tue1f8zc4
+  - name: "Dynamic Allocator Misuse: tcache"
+    type: lecture
+    video: 0jHtqqdVv1Y
+    playlist: PL-ymxv0nOtqr4OchXR2rV_WNhpj4ccPq1
+    slides: 13NbUlNvj1Rm-Cc_E_Crp678c-mgzCi0BYfzXIzFB3zI
+  - name: "Dynamic Allocator Misuse: Chunks and Metadata"
+    type: lecture
+    video: osFevdDR0Xw
+    playlist: PL-ymxv0nOtqr4OchXR2rV_WNhpj4ccPq1
+    slides: 1BlapIDslDaWeBPUamdG0i35-yveGvWJHZaW_0dan6sU
+  - name: "Dynamic Allocator Misuse: Metadata Corruption"
+    type: lecture
+    video: PtpPcGcX020
+    playlist: PL-ymxv0nOtqr4OchXR2rV_WNhpj4ccPq1
+    slides: 14SYq0TTVxEGWHNUG1BP66A8liPDD2pqJUs2WrXlCZNE
+  - name: "Dynamic Allocator Misuse: Safe-Linking"
+    type: lecture
+    video: TOQ_QtjpbnA
+    playlist: PL-ymxv0nOtqr4OchXR2rV_WNhpj4ccPq1
+    slides: 1TfwQjqDUFwnhp4pm0W5gFZsTIJO92xtemrp66z-afIM
+
+- id: memory-mastery
+  name: Exploitation Primitives
+  description: |
+    Prior modules introduced specific vulnerabilities or exploitation techniques that can be used to gain the ability to read, write, or influence control flow.
+    These types of exploits can be categorized into exploitation primitives:
+    - Arbitrary Read
+    - Arbitrary Write
+    - Arbitrary Call
+
+    This module explores how to create and leverage reusable exploitation primitives.
+
+    These primitives will need to be repeatedly used to "pivot" around memory.
+    This "pivoting" can turn a pointer leak into almost any memory address a skilled hacker desires.
+
+  challenges:
+  - id: level-1-0
+    name: level1.0
+    description: "Create and use arbitrary read primitives to read from the .bss."
+  - id: level-1-1
+    name: level1.1
+    description: "Create and use arbitrary read primitives to read from the .bss."
+  - id: level-2-0
+    name: level2.0
+    description: "Create and use arbitrary read primitives to read from a thread's heap."
+  - id: level-2-1
+    name: level2.1
+    description: "Create and use arbitrary read primitives to read from a thread's heap."
+  - id: level-3-0
+    name: level3.0
+    description: "Create and use arbitrary read primitives to read from a thread's stack."
+  - id: level-3-1
+    name: level3.1
+    description: "Create and use arbitrary read primitives to read from a thread's stack."
+  - id: level-4-0
+    name: level4.0
+    description: "Create and use arbitrary read primitives to read from the .bss, now with PIE."
+  - id: level-4-1
+    name: level4.1
+    description: "Create and use arbitrary read primitives to read from the .bss, now with PIE."
+  - id: level-5-0
+    name: level5.0
+    description: "Create and use arbitrary read primitives to read from the environment."
+  - id: level-5-1
+    name: level5.1
+    description: "Create and use arbitrary read primitives to read from the environment."
+  - id: level-6-0
+    name: level6.0
+    description: "Create and use arbitrary read primitives to read from the main heap."
+  - id: level-6-1
+    name: level6.1
+    description: "Create and use arbitrary read primitives to read from the main heap."
+  - id: level-7-0
+    name: level7.0
+    description: "Create and use arbitrary read/write primitives to obtain the flag."
+  - id: level-7-1
+    name: level7.1
+    description: "Create and use arbitrary read/write primitives to obtain the flag."
+  - id: level-8-0
+    name: level8.0
+    description: "Create and use arbitrary read/write primitives to obtain the flag."
+  - id: level-8-1
+    name: level8.1
+    description: "Create and use arbitrary read/write primitives to obtain the flag."
+  - id: level-9-0
+    name: level9.0
+    description: "Create and use arbitrary read/write primitives with less control of the heap."
+  - id: level-9-1
+    name: level9.1
+    description: "Create and use arbitrary read/write primitives with less control of the heap."
+  - id: level-10-0
+    name: level10.0
+    description: "Create and use arbitrary read/write primitives with less control of the heap II."
+  - id: level-10-1
+    name: level10.1
+    description: "Create and use arbitrary read/write primitives with less control of the heap II."
+  resources:
+  - name: "Advanced Exploitation: Introduction"
+    type: lecture
+    video: s7DCT9qccYc
+    playlist: PL-ymxv0nOtqoeZ2n5AcYjv-CzJ64V4Yyu
+    slides: 1uHpo78FQVv8RaPe0IVUMXRBouBau6j4JFgx3_1-_wIw
+  - name: "Advanced Exploitation: Heap Address Disclosure via Race Conditions"
+    type: lecture
+    video: LFlsuBF-s7g
+    playlist: PL-ymxv0nOtqoeZ2n5AcYjv-CzJ64V4Yyu
+    slides: 1Nh47gCskB3Cr1d6Yr1Q8RWwt2p8DlHvJbwgSs-3m4kA
+  - name: "Advanced Exploitation: In-Memory Forensics"
+    type: lecture
+    video: WElEwa1pXCw
+    playlist: PL-ymxv0nOtqoeZ2n5AcYjv-CzJ64V4Yyu
+    slides: 1UY3GniieKBiphekH_RmkghYdm5M5DBNklHCxfN2S62A
+  - name: "Advanced Exploitation: Exploit Primitives"
+    type: lecture
+    video: PY9fNJel-X8
+    playlist: PL-ymxv0nOtqoeZ2n5AcYjv-CzJ64V4Yyu
+    slides: 1fMVQqCeNioayny-oUd3uYFNzkyHDz3u-B8f_JiJtf6Y
+  - name: "Advanced Exploitation: End-to-End Pwnage"
+    type: lecture
+    video: okLF1WnbV4M
+    playlist: PL-ymxv0nOtqoeZ2n5AcYjv-CzJ64V4Yyu
+    slides: 1Q6ZjNq7VeU08Tba5uWkgJy6IMH5sDT8jCW1d8vmau4M
+  - name: Further Reading
+    type: markdown
+    content: |
+      - A short read on some methods used in [pivoting around memory](https://blog.osiris.cyber.nyu.edu/2019/04/06/pivoting-around-memory/).
+
+- id: dynamic-allocator-exploitation
+  name: Dynamic Allocator Exploitation
+  description: |
+    The glibc heap consists of many components distinct parts that balance performance and security.
+    Beyond `tcache` exists a memory management system consisting of many interrelated bins and components.
+    This module explores these components and interactions between them.
+    By applying advanced heap exploits that "shape" the internal state of the heap, exploitation primitives can be created.
+    Heap exploits are complex and ephemeral, frequently changing with libc versions.
+    For this reason, success in the module relies on parsing [heap exploit proof of concepts](https://github.com/shellphish/how2heap) to craft an exploit.
+
+  challenges:
+  - id: level-1-0
+    name: level1.0
+    description: "Leverage consolidation to obtain the flag."
+  - id: level-1-1
+    name: level1.1
+    description: "Leverage consolidation to obtain the flag."
+  - id: level-2-0
+    name: level2.0
+    description: "Leverage consolidation to obtain the flag."
+  - id: level-2-1
+    name: level2.1
+    description: "Leverage consolidation to obtain the flag."
+  - id: level-3-0
+    name: level3.0
+    description: "Leverage consolidation to obtain the flag."
+  - id: level-3-1
+    name: level3.1
+    description:  "Leverage consolidation to obtain the flag."
+  - id: level-4-0
+    name: level4.0
+    description: "Perform an advanced heap exploit to obtain the flag"
+  - id: level-4-1
+    name: level4.1
+    description: "Perform an advanced heap exploit to obtain the flag"
+  - id: level-5-0
+    name: level5.0
+    description: "Perform an advanced heap exploit to obtain the flag"
+  - id: level-5-1
+    name: level5.1
+    description: "Perform an advanced heap exploit to obtain the flag"
+  - id: level-6-0
+    name: level6.0
+    description: "Perform an advanced heap exploit to obtain the flag"
+  - id: level-6-1
+    name: level6.1
+    description: "Perform an advanced heap exploit to obtain the flag"
+  - id: level-7-0
+    name: level7.0
+    description: "Perform an advanced heap exploit to obtain the flag"
+  - id: level-7-1
+    name: level7.1
+    description: "Perform an advanced heap exploit to obtain the flag"
+  - id: level-8-0
+    name: level8.0
+    description: "Perform an advanced heap exploit to obtain the flag"
+  - id: level-8-1
+    name: level8.1
+    description: "Perform an advanced heap exploit to obtain the flag"
+  resources:
+  - name: "Dynamic Allocator II - Beyond tcache"
+    type: lecture
+    video: pN99hwq8qUE
+    playlist: PL-ymxv0nOtqrJBBFw-B5cKGYoAtrw49cP
+    slides: 13DM0BwhHjc1qqybzLDX4Ea9kArf3BeNYTz3QP_6h0bM
+  - name: "Dynamic Allocator II - The Bins"
+    type: lecture
+    video: _dqBXYEUQXM
+    playlist: PL-ymxv0nOtqrJBBFw-B5cKGYoAtrw49cP
+    slides: 1R56RcNylZs73mjbNutdW82cRZwORVwki9i-TqVhyuOY
+  - name: "Dynamic Allocator II - Exploitation"
+    type: lecture
+    video: P2__SxA1P9I
+    playlist: PL-ymxv0nOtqrJBBFw-B5cKGYoAtrw49cP
+    slides: 1ZPK8W9cWBaljguMbxpaQaHo_qr8Ps41za-FSFIwq38M
+  - name: shellphish/how2heap & Tips
+    type: markdown
+    content: |
+      - The challenges in this module are using glibc 2.35.
+      - Remember, there is a lot of heap exploitation information online that is outdated.
+      - An "advanced heap exploit" refers to techniques shown in [how2heap](https://github.com/shellphish/how2heap).
+          - These exploits take advantage of the normal functionality of specific heap actions.
+          - The proof of exploit code is compilable!  Build it, run it, change it, gdb it.  This is your opportunity to reason about how it works!
+      - Break down the challenges and heap exploits into primitives.
+          - List the vulnerabilities/primitives in the challenge.
+          - Identify the primitive(s) needed to obtain the flag in the challenge.  Is an arbitrary read needed?  An arbitrary write?  Does the challenge have reading/writing functionality and setting a pointer value is sufficient to obtain the flag?
+          - Explore the how2heap exploit repository.  Distill the heap exploits to requirements and resulting primitives.
+          - Filter the exploitation techniques to only those that can work given the challenge specifics.
+
+- id: speculative-execution
+  name: Microarchitecture Exploitation
+  description: |
+    Modern  CPUs are impressive feats of engineering effort.  Consistently offering performance improvements every generation, but how?
+    This module explores security vulnerabilities that can lurk hidden, below the assembly, in CPU architecture itself!
+  challenges:
+  - id: babyarch-parseonepage
+    name: level1
+    description: Get started with a binary that side-channels itself!
+  - id: babyarch-parsemultipage
+    name: level2
+    description: A binary that side-channels itself, now using multiple pages.
+  - id: babyarch-measuretiming
+    name: level3
+    description: Measure memory access timings to leak the flag via a side-channel.
+  - id: babyarch-writeall
+    name: level4
+    description: Perform a full flush and reload side-channel attack!
+  - id: babyarch-speculate
+    name: level5
+    description: This binary never reads the flag bytes.. or does it?
+  - id: level-1
+    name: level6
+    description: Perform a flush and reload attack to obtain the flag.
+  - id: level-2
+    name: level7
+    description: Locate the flag in memory using shellcode, you will only have access to the "exit" system call.
+  - id: level-2-1
+    name: level7.1
+    description: Locate the flag in memory using shellcode after all references to it have been DESTROYED, you will only have access to the "exit" system call. You will need a creative way of locating the flag's address in your process!
+  - id: level-3
+    name: level8
+    description: Use a speculative bounds check bypass which accesses a page mapped in userspace to leak the flag.
+  - id: level-4
+    name: level9
+    description: Use a speculative indirect call which accesses a page mapped in userspace to leak the flag.
+  - id: level-5
+    name: level10
+    description: Use a cache side channel triggered through y85 shellcode which accesses a page mapped in userspace to leak the flag.
+  - id: level-6
+    name: level11
+    description: Use a Spectre v1 channel triggered through y85 shellcode which accesses a page mapped in userspace to leak the flag.
+  - id: level-7
+    name: level12
+    description: Use a Spectre v2 side channel triggered through y85 shellcode which accesses a page mapped in userspace to leak the flag.
+  - id: level-8
+    name: level13
+    description: Use meltdown to read the flag from the kernel module's memory.
+  - id: level-9
+    name: level14
+    description: Leak the flag via meltdown from another process after getting the address of its task_struct from the kernel module and using it to find and walk its page tables.
+  resources:
+    - name: "Microarchitecture Exploitation - Below Assembly"
+      type: lecture
+      slides: 16Cah3h_ZDTJxPObVxj0KhNGG5wuWh1cOvSrWZiQWJrk
+      playlist: PL-ymxv0nOtqoU92gd9MEX4ABDGW6nvVma
+      video: mMC_vYSHbjI
+    - name: "Microarchitecture Exploitation - Flush and Reload"
+      type: lecture
+      slides: 1L8Hrc3s7OuVUf9c2M_5bMeIx3XZltPhk5DdSclE-lH4
+      playlist: PL-ymxv0nOtqoU92gd9MEX4ABDGW6nvVma
+      video: vh8NxJ7YrO0
+    - name: "Microarchitecture Exploitation - Meltdown"
+      type: lecture
+      slides: 1arCbezSRaEfjquC8pSt8REUBx7KRnpB7_r1vSx-M_yk
+      playlist: PL-ymxv0nOtqoU92gd9MEX4ABDGW6nvVma
+      video: 6wCfyw4hJJU
+    - name: "Microarchitecture Exploitation - Spectre"
+      type: lecture
+      slides: 1PQyr2D6IsFOUs0sXYbYtcRQGGTMMJNb42uKDOlLT6vQ
+      playlist: PL-ymxv0nOtqoU92gd9MEX4ABDGW6nvVma
+      video: P0OGmS5vKjk
+
+- id: kernel-exploitation
+  resources:
+    - name: "Slab Allocators"
+      type: lecture
+      slides: 1SX5U53LILIDVF8BHkJdK9NTDL27jfulxxW-qbnndJgs
+      playlist: PL-ymxv0nOtqqWPp-o1OiSoBJIt_bb2v-H
+      video: 4UucTCiQLXE
+    - name: "Kernel Heap Protections"
+      type: lecture
+      slides: 14ZofKySqw8dftl6Xc1l42iD9HdNV3gNIpXxRulfPccw
+      playlist: PL-ymxv0nOtqqWPp-o1OiSoBJIt_bb2v-H
+      video: ovefXNzokpM
+    - name: "Exploiting the Kernel"
+      type: lecture
+      slides: 1xJX9YiJNnzO0GgupZ8vvdznpjs0EJ55C3Rl_6WvmC2w
+      playlist: PL-ymxv0nOtqqWPp-o1OiSoBJIt_bb2v-H
+      video: qmhXsmOgb-s
+    - name: "Recommended Reading"
+      type: markdown
+      content: |
+        - Beginning Kernel Exploitation: https://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/
+        - Kernel ROP (necessary): https://lkmidas.github.io/posts/20210128-linux-kernel-pwn-part-2/
+        - RetSpill Exploitation Technique Paper: https://adamdoupe.com/publications/retspill-ccs2023.pdf
+        - RetSpill Exploitation Technique Demo: https://github.com/sefcom/RetSpill
+        - CVE-2021-22555 (important): https://google.github.io/security-research/pocs/linux/cve-2021-22555/writeup.html
