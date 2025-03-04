@@ -14,6 +14,7 @@ modules:
   challenges:
   - id: level-1-0
     name: Level 1.0
+    description: test
   - id: level-3-1
     name: Level 3.1
   - id: level-4-0
